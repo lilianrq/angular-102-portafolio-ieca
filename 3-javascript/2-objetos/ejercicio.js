@@ -21,9 +21,13 @@
 const juegos = {
     aguila: 0,
     sol: 1,
-    tirarMoneda: undefined
-}
+    //completando la propiedad "tirarMoneda"
+    tirarMoneda: function() {
+        const aleatorio = Math.floor(Math.random()*2);
+        console.log(aleatorio === this.aguila? "Es águila " : "Es sol ");
+    },
+};
 
 for (let tiros = 0; tiros < 10; tiros++) {
-    // juegos.tirarMoneda()
+    juegos.tirarMoneda();
 }
